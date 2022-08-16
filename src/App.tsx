@@ -1,13 +1,23 @@
 import React from 'react';
+import styled from 'styled-components';
+import tw from 'twin.macro';
 import './App.css';
+import { HomePage } from './app/containers/HomePage';
+
+const AppContainer = styled.div`
+  ${tw`
+    w-full
+    h-full
+    flex 
+    flex-col 
+  `}
+`;
 
 function App() {
   return (
-    <div className='bg-slate-600'>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    </div>
+    <AppContainer>
+      <HomePage/>
+      </AppContainer>
     
   );
 }
